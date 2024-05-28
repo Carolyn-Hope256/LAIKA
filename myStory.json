@@ -1,0 +1,192 @@
+{
+    "Title": "Violet Skies",
+    "Credits": "Created by Carolyn Hope (cmhope@ucsc.edu).",
+    "InitialLocation": "Waking",
+    "Locations": {
+        "Waking": {
+            "Body": "You awake beneath strange violet skies. You lie in a meadow,\n caressed by cloud-soft crimson grass.",
+            "AddKeys": [
+                {
+                    "Key":"UnPicked"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Get Up",
+                    "Type": "Travel",
+                    "Target": "Meadows"
+                }
+            ]
+        },
+        "Meadows": {
+            "Body": "You stand in a crimson meadow beneath violet skies. Rolling hills stretch out around you.\nBeyond them to the North, a mountain towers above the landscape.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Type": "Travel",
+                    "Target": "Mountain"
+                },
+                {
+                    "Text": "West",
+                    "Type": "Travel",
+                    "Target": "BronzeFields"
+                },
+                {
+                    "Text": "South",
+                    "Type": "Travel",
+                    "Target": "Tree"
+                },
+                {
+                    "Text": "East",
+                    "Type": "Travel",
+                    "Target": "BeachTrail" 
+                }
+            ]
+        },
+        "Mountain": {
+            "Body": "Passing through jade shrubs and ivory lichen, you reach the summit.\nFar to the south, a lone fruit tree stands in a small valley.\nTo the east, an iridescent shoreline meets a golden horizon, and to the west bronze flowers reflect painfully bright in the rising sun.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Type": "Travel",
+                    "Target": "Meadows"
+                }
+            ]
+        },
+        "BronzeFields": {
+            "Body": "As you wander westwards the foliage begins to turn brittle and metalic, hematite bramble chafing at your legs. A colosal windmill waves to you in the distance.",
+            "Choices": [
+                {
+                    "Text": "Turn Back",
+                    "Type": "Travel",
+                    "Target": "Meadows"
+                },
+                {
+                    "Text": "Press On",
+                    "Type": "Travel",
+                    "Target": "SharpDreams"
+                }
+            ]
+        },
+        "SharpDreams": {
+            "Body": "Iron-red bramble yields to bronze flowerbeds as you make your way east, knife-sharp and so bright in the morning sun that you can barely make out the terrain. You do your best to maintain your footing, but your legs succumb to the lashes and you fall into the razorflowers."
+        },
+        "Tree": {
+            "Body": "You make your way south and find yourself in a small valley.",
+            "LockedText": [
+                {
+                    "Text": "A single tree stands in the valley, supple fruit within easy reach. The roots are curved to form the perfect resting place, covered in velvet moss.",
+                    "UnKey": "Fruit"
+                },
+                {
+                    "Text": "A single tree stands in the valley. The roots are curved to form the perfect resting place, covered in velvet moss. Its fruit have been picked bare.",
+                    "Key": "Fruit"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Type": "Travel",
+                    "Target": "Meadows"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Eat the Fruit",
+                    "Type": "Travel",
+                    "Target": "SweetDreams",
+                    "UnKey": "Fruit"
+                }
+            ]
+        },
+        "SweetDreams": {
+            "Body": "You pluck a fruit from its branch and take a bite.",
+            "AddKeys": [
+                {
+                    "Key":"Fruit"
+                }
+            ],
+            "RemoveKeys": [
+                {
+                    "Key":"UnPicked"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Type": "Travel",
+                    "Target": "Meadows"
+                }
+            ],
+            "Parent": "Tree"
+
+        },
+        "BeachTrail": {
+            "Body": "You walk eastward, finding a footpath through crimson grass and indigo daisies. You now stand atop a sheer glass cliff, a lone path leading safely down to the beach.",
+            "Choices": [
+                {
+                    "Text": "West",
+                    "Type": "Travel",
+                    "Target": "Meadows"
+                },
+                {
+                    "Text": "East",
+                    "Type": "Travel",
+                    "Target": "Shoreline" 
+                }
+            ]
+        },
+        "Shoreline": {
+            "Body": "You find yourself at the base of the cliff path and now you stand on a beach of mancala bead sea glass. You look out to sea, where mother-of-pearl waters meet a golden sky. To the north, a great lighthouse stands where the sun should be.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Type": "Travel",
+                    "Target": "NorthShore"
+                },
+                {
+                    "Text": "South",
+                    "Type": "Travel",
+                    "Target": "SouthShore" 
+                }
+            ]
+        },
+        "NorthShore": {
+            "Body": "You make your way north along the beach. The lighthouse drowns out almost everything now.",
+            "Choices": [
+                {
+                    "Text": "Enter the Lighthouse",
+                    "Type": "Travel",
+                    "Target": "BrightDreams"
+                },
+                {
+                    "Text": "South",
+                    "Type": "Travel",
+                    "Target": "Shoreline" 
+                }
+            ]
+        },
+        "BrightDreams": {
+            "Body": "You climb the coiling stairs up to the latern room. You are with the sun now, and it drowns you out."
+        },
+        "SouthShore": {
+            "Body": "The beach narrows as you travel south, until you can finally walk no further. The shimering waters lap at your thoughts. You shouldnt stay here long.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Type": "Travel",
+                    "Target": "Shoreline"
+                },
+                {
+                    "Text": "Sit",
+                    "Type": "Travel",
+                    "Target": "StaticDreams" 
+                }
+            ]
+        },
+        "StaticDreams": {
+            "Body": "---"
+        }
+
+    }
+}

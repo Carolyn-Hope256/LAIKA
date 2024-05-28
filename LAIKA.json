@@ -1,0 +1,666 @@
+{
+    "Title": "L.A.I.K.A",
+    "Credits": "Created by Carolyn Hope (cmhope@ucsc.edu).",
+    "InitialLocation": "DeepSpace",
+    "Locations": {
+        "DeepSpace": {
+            "Body": "By the time humanity was able to form an effective global coalition to combat the anthropocene climate crisis, irreparable damage had already been done. Runaway polar melting and ever-increasing greenhouse gas levels have led to a hellish subsistence existence for humanity, who must now turn towards their long-forgotten dreams of space travel. You are the deepspace probe L.A.I.K.A., Lifeform-Analyzing Interstellar Konstruction Automaton. Human astronomers have identified the planet Helithe in the Selis system as a potential terraforming candidate. Your directive is to turn this baren world into a new home for humanity.",
+            "Choices": [
+                {
+                    "Text": "Enter the Selis System",
+                    "Type": "Travel",
+                    "Target": "Selis"
+                }
+            ]
+        },
+        "Selis":{
+            "Body": "You are in orbit around the star Selis. From here you can travel anywhere within the inner solar system, or cross the asteroid belt to access the outer planets.",
+            "Choices": [
+                {
+                    "Text": "Travel to Selis I, the metalic world",
+                    "Type": "Travel",
+                    "Target": "Selis I"
+                },
+                {
+                    "Text": "Travel to Helithe, the earthen world",
+                    "Type": "Travel",
+                    "Target": "Helithe"
+                },
+                {
+                    "Text": "Travel to Selis III, the gas world",
+                    "Type": "Travel",
+                    "Target": "Selis III"
+                },
+                {
+                    "Text": "Enter the asteroid belt",
+                    "Type": "Travel",
+                    "Target": "Asteroid Belt"
+                }
+            ]
+        },
+        "Selis I":{
+            "Body": "You are in orbit of Selis I, a scorched metalic world orbiting close to its host star.",
+            "LockedText": [
+                {
+                    "Text": "The crust and mantle of this world are rich in metals necessary for large-scale contstruction projects. The supplies you carry onboard should be sufficient to begin mining operations.",
+                    "Keys": [
+                        {
+                            "UnKey": "MetalMine"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Across the surface, mining drills thrum and courier drones scurry to bring building materials to orbital catapults.",
+                    "Keys": [
+                        {
+                            "Key": "MetalMine"
+                        }
+                    ]
+                }
+                
+            ],
+            
+            "Choices": [
+                {
+                    "Text": "Break Orbit",
+                    "Type": "Travel",
+                    "Target": "Selis"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Establish mining outpost",
+                    "Type": "Travel",
+                    "Target": "Mine",
+                    "Keys":[
+                        {
+                            "UnKey": "MetalMine"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Mine":{
+            "Body": "You create a mining and manufacturing suite from the materials you brought on your journey, which deploys on the surface of Selis I without issue. Immediately, the site begins its directive of mining and self replication. \nWithin a few short years, mining drills and manufactuing centers dot the surface of the planet, and the colony begins launching supply pods and construction vessels into orbit.",
+            "AddKeys": [
+                {
+                    "Key":"MetalMine"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Type": "Travel",
+                    "Target": "Selis I"
+                }
+            ]
+        },
+        "Helithe":{
+            "Body": "You are in orbit around Helithe. Though it orbits Selis at a distance that could theoretically support human life, the world is currently lifeless and baren, lacking crucial elements of habitability.",
+            "LockedText": [
+                {
+                    "Text": "The planet currently harbors only a thin atmosphere of carbon dioxide. You will need to source significant ammounts of oxygen and nitrogen elsewhere in the system.",
+                    "Keys": [
+                        {
+                            "UnKey": "GasHarvest"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Gas pods have transfered a sufficient amount nitrogen and oxygen from Selis III to Helithe, though without a magnetic field this atmosphere will not last.",
+                    "Keys": [
+                        {
+                            "Key": "GasHarvest"
+                        },
+                        {
+                            "UnKey": "MagCore"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Gas pods have transfered a sufficient amount nitrogen and oxygen from Selis III to Helithe. The atmosphere is of a correct composition and density to support human life.",
+                    "Keys": [
+                        {
+                            "Key": "GasHarvest"
+                        },
+                        {
+                            "Key": "MagCore"
+                        }
+                    ]
+                },
+                {
+                    "Text": "The surface of Helithe is currently bone-dry. You will need to harvest a large amount of ice from somewhere in the system in order to create a hydrosphere capable of supporting human life.",
+                    "Keys": [
+                        {
+                            "UnKey": "CometSling"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Your comet sling has provided the Helithe with ample water, but the establishment of an Earth-like hydrosphere will require a denser atmosphere.",
+                    "Keys": [
+                        {
+                            "Key": "CometSling"
+                        },
+                        {
+                            "UnKey": "GasHarvest"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Your comet sling has provided the Helithe with ample water, and has resulted in an Earth-like hydrosphere.",
+                    "Keys": [
+                        {
+                            "Key": "CometSling"
+                        },
+                        {
+                            "Key": "GasHarvest"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Though not comprised of deadly perchlorates like Mars, the surface of Helithe is still devoid of many soil minerals necessary to support life.",
+                    "Keys": [
+                        {
+                            "UnKey": "SoilMinerals"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Your asteroid mines have delivered crucial soil minerals to Helithe, but they need to be integrated into the soil.",
+                    "Keys": [
+                        {
+                            "Key": "SoilMinerals",
+                            "UnKey": "SoilDroids"
+                        }
+                    ]
+                },
+                {
+                    "Text": "A fleet of small robots have distributed crucial minerals across the surface and mixed them into the soil.",
+                    "Keys": [
+                        {
+                            "Key": "SoilDroids"
+                        }
+                    ]
+                },
+                {
+                    "Text": "The planet lacks a magnetic field.",
+                    "Keys": [
+                        {
+                            "UnKey": "MagCore"
+                        }
+                    ]
+                },
+                {
+                    "Text": "An ancient device has heated and spun the planet's core. The planet now posses magnetic field to shield life and the atmosphere from solar radiation.",
+                    "Keys": [
+                        {
+                            "Key": "MagCore"
+                        }
+                    ]
+                },
+                {
+                    "Text": "The signal seems to be coming from an artificial satellite in a remote orbit...",
+                    "Keys": [
+                        {
+                            "Key": "Signal"
+                        },
+                        {
+                            "UnKey": "SatelliteFound"
+                        }
+                    ]
+                },
+                {
+                    "Text": "The planet is potentially habitable, and ready to be life-seeded.",
+                    "Keys": [
+                        {
+                            "Key": "GasHarvest"
+                        },
+                        {
+                            "Key": "CometSling"
+                        },
+                        {
+                            "Key": "SoilDroids"
+                        },
+                        {
+                            "Key": "MagCore"
+                        }
+                    ]           
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Break Orbit",
+                    "Type": "Travel",
+                    "Target": "Selis"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Deploy soil droids",
+                    "Type": "Travel",
+                    "Target": "Soil Droids",
+                    "Keys": [
+                        {
+                            "Key": "SoilMinerals"
+                        },
+                        {
+                            "UnKey": "SoilDroids"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Dock with the satellite",
+                    "Type": "Travel",
+                    "Target": "Hidden Satellite",
+                    "Keys": [
+                        {
+                            "Key": "Signal"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Life-seed the planet",
+                    "Type": "Travel",
+                    "Target": "LifeSeed",
+                    "Keys": [
+                        {
+                            "Key": "GasHarvest"
+                        },
+                        {
+                            "Key": "CometSling"
+                        },
+                        {
+                            "Key": "SoilDroids"
+                        },
+                        {
+                            "Key": "MagCore"
+                        }
+                    ]           
+                }
+            ]
+        },
+        "Soil Droids": {
+            "Body": "You fabricate and release a swarm of small drones across the surface of Helithe, which begin dutifully mixing the mined nutrients into the soil.",
+            "AddKeys": [
+                {
+                    "Key":"SoilDroids"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Type": "Travel",
+                    "Target": "Helithe"
+                }
+            ]
+        },
+        "Hidden Satellite":{
+            "Body": "You are interfacing with a strange satellite in orbit around Helithe. It is clearly designed by intellegnt life, but you can only speculate as to who they may have been.",
+            "AddKeys": [
+                {
+                    "Key":"SatelliteFound"
+                }
+            ],
+            "LockedText": [
+                {
+                    "Text": "After some time spent decyphering, the satellite seems to be a control platform for a massive subterranian terraforming device! It awaits your activation signal.",
+                    "Keys": [
+                        {
+                            "UnKey": "MagCore"
+                        }
+                    ]
+                },
+                {
+                    "Text": "The satellite has served its purpose. It still stands as an invaluable xenoarcheological artifact, but that lies outside the scope of your directive.",
+                    "Keys": [
+                        {
+                            "Key": "MagCore"
+                        }
+                    ]
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Return to Helithe",
+                    "Type": "Travel",
+                    "Target": "Helithe"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Activate the device",
+                    "Type": "Travel",
+                    "Target": "Activate Satellite",
+                    "Keys":[
+                        {
+                            "UnKey": "MagCore"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Activate Satellite": {
+            "Body": "You enter the activation command into the satellite. Massive heating engines come to life, liquifying the outer core. Polar motors send the inner core into a spin, and a magnetic field forms.",
+            "AddKeys": [
+                {
+                    "Key":"MagCore"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Type": "Travel",
+                    "Target": "Hidden Satellite"
+                }
+            ]
+        },
+        "Selis III":{
+            "Body": "You are in orbit of Selis III, a relatively small gas giant that lies just barely within the boundary of the asteroid belt.",
+            "LockedText": [
+                {
+                    "Text": "Though its gas mixture is far from breathable for humans, it should contain sufficient oxygen and nitrogen to form an atmosphere around Helithe.",
+                    "Keys": [
+                        {
+                            "UnKey": "GasHarvest"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Skimming an atmosphere's worth of nitrogen and oxygen from the surface and transporting it to Helithe would be a gargantuan undertaking, one that you are not currently equipped to carry out. You need more infrastructure.",
+                    "Keys": [
+                        {
+                            "UnKey": "MetalMine"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Your construction fleet stands ready.",
+                    "Keys": [
+                        {
+                            "Key": "MetalMine"
+                        },
+                        {
+                            "UnKey": "GasHarvest"
+                        }
+                    ]
+                },
+                {
+                    "Text": "An enormous skimming platform hangs in the upper atmosphere, harvesting, filtering, and pressurizing an oxygen/nitrogen mix for transport.",
+                    "Keys": [
+                        {
+                            "Key": "GasHarvest"
+                        }
+                    ]
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Break Orbit",
+                    "Type": "Travel",
+                    "Target": "Selis"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Construct atmosphere skimmer",
+                    "Type": "Travel",
+                    "Target": "Platform",
+                    "Keys":[
+                        {
+                            "Key": "MetalMine"
+                        },
+                        {
+                            "UnKey": "GasHarvest"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Platform":{
+            "Body": "You direct your construction fleet to build an enormous atmospheric harvester in the upper atmosphere, filtering out the nitrogen and oxygen, blending them into an ideal mixture, and packing them into pressurized containers for transport.",
+            "AddKeys": [
+                {
+                    "Key":"GasHarvest"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Type": "Travel",
+                    "Target": "Selis III"
+                }
+            ]
+        },
+        "Asteroid Belt":{
+            "Body": "You are in the asteroid belt that divides the inner and outer planets.",
+            "LockedText": [
+                {
+                    "Text": "These asteroids are rich in soil minerals crucial for many forms of Terran life.",
+                    "Keys": [
+                        {
+                            "UnKey": "SoilMinerals"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Mining enough minerals to fertilize a planet and transporting them to Helithe would be a gargantuan undertaking, one that you are not currently equipped to carry out. You need more infrastructure.",
+                    "Keys": [
+                        {
+                            "UnKey": "SoilMinerals"
+                        },
+                        {
+                            "UnKey": "MetalMine"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Your construction fleet stands ready.",
+                    "Keys": [
+                        {
+                            "UnKey": "SoilMinerals"
+                        },
+                        {
+                            "Key": "MetalMine"
+                        }
+                    ]
+                },
+                {
+                    "Text": "A fleet of mining drones scurry between the asteroids, mining iron, potassium, and phosphorus and transporting them to Helithe.",
+                    "Keys": [
+                        {
+                            "Key": "SoilMinerals"
+                        }
+                    ]
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Return to inner solar system",
+                    "Type": "Travel",
+                    "Target": "Selis"
+                },
+                {
+                    "Text": "Travel to Selis IV, the ringed world",
+                    "Type": "Travel",
+                    "Target": "Selis IV"
+                },
+                {
+                    "Text": "Travel to Selis V, the baren world",
+                    "Type": "Travel",
+                    "Target": "Selis V"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Construct mining fleet",
+                    "Type": "Travel",
+                    "Target": "AsteroidMine",
+                    "Keys":[
+                        {
+                            "Key": "MetalMine"
+                        },
+                        {
+                            "UnKey": "SoilMinerals"
+                        }
+                    ]
+                }
+            ]
+        },
+        "AsteroidMine": {
+            "Body": "Your construction fleet fabricates a swarm of mining drones, which mine iron, potassium, phosphorus, and other minerals and carry them to Helithe.",
+            "AddKeys": [
+                {
+                    "Key":"SoilMinerals"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Type": "Travel",
+                    "Target": "Asteroid Belt"
+                }
+            ]
+        },
+        "Selis IV":{
+            "Body": "You in orbit of Selis IV, a frigid ringed world.",
+            "Choices": [
+                {
+                    "Text": "Break Orbit",
+                    "Type": "Travel",
+                    "Target": "Asteroid Belt"
+                }
+            ],
+            "LockedText": [
+                {
+                    "Text": "The rings of this world are comprised primarily of ice. They could be a sufficient source of water for Helithe.",
+                    "Keys": [
+                        {
+                            "UnKey": "CometSling"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Redirecting enough ice through the belt and towards Helithe to form a complete hydrosphere would be a gargantuan undertaking, one that you are not currently equipped to carry out. You need more infrastructure.",
+                    "Keys": [
+                        {
+                            "UnKey": "CometSling"
+                        },
+                        {
+                            "UnKey": "MetalMine"
+                        }
+                    ]
+                },
+                {
+                    "Text": "Your construction fleet stands ready.",
+                    "Keys": [
+                        {
+                            "UnKey": "CometSling"
+                        },
+                        {
+                            "Key": "MetalMine"
+                        }
+                    ]
+                },
+                {
+                    "Text": "An enourmous ice catapult is perched at the edge of the rings, firing comets through the asteroid belt and towards Helithe.",
+                    "Keys": [
+                        {
+                            "Key": "CometSling"
+                        }
+                    ]
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Construct ice sling",
+                    "Type": "Travel",
+                    "Target": "Comet Sling",
+                    "Keys":[
+                        {
+                            "Key": "MetalMine"
+                        },
+                        {
+                            "UnKey": "CometSling"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Comet Sling": {
+            "Body": "Your construction fleet fabricates an enormous artificial satelite beyond the rings of Selis IV, catapulting ice-rich rocks from the rings towards Helithe.",
+            "AddKeys": [
+                {
+                    "Key":"CometSling"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Type": "Travel",
+                    "Target": "Selis IV"
+                }
+            ]
+        },
+        "Selis V":{
+            "Body": "You are in orbit aroud Selis V, a small, baren world far from its host star.",
+            "LockedText": [
+                {
+                    "Text": "You're picking up a bizarre, unidentified signal.",
+                    "Keys": [
+                        {
+                            "UnKey": "Signal"
+                        }
+                    ]
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Break Orbit",
+                    "Type": "Travel",
+                    "Target": "Asteroid Belt"
+                }
+            ],
+            "LockedChoices": [
+                {
+                    "Text": "Trace the signal",
+                    "Type": "Travel",
+                    "Target": "Signal Trace",
+                    "Keys":[
+                        {
+                            "UnKey": "Signal"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Signal Trace": {
+            "Body": "You trace the signal, it seems to originate from Helithe!",
+            "AddKeys": [
+                {
+                    "Key":"Signal"
+                }
+            ],
+            "Choices": [
+                {
+                    "Text": "Continue",
+                    "Type": "Travel",
+                    "Target": "Selis V"
+                }
+            ]
+        },
+        "LifeSeed": {
+            "Body": "You arm yourself with the plant samples, fungal spores, and microbes you brought with you from Earth, and begin to distribute them across the surface of Helithe. It takes time, working your way slowly from single-celled organisms, algaes and molds, and finally large plant life. After a few decades, Helithe is ready for human habitation.",
+            "Choices": [
+                {
+                    "Text": "Rest",
+                    "Type": "Travel",
+                    "Target": "Rest"
+                }
+            ]
+        },
+        "Rest": {
+            "Body": "You position yourself in a graveyard orbit, send a message to Earth, and go to sleep."
+        }
+    }
+}
