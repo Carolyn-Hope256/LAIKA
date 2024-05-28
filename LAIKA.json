@@ -4,7 +4,7 @@
     "InitialLocation": "DeepSpace",
     "Locations": {
         "DeepSpace": {
-            "Body": "By the time humanity was able to form an effective global coalition to combat the anthropocene climate crisis, irreparable damage had already been done. Runaway polar melting and ever-increasing greenhouse gas levels have led to a hellish subsistence existence for humanity, who must now turn towards their long-forgotten dreams of space travel. You are the deepspace probe L.A.I.K.A., Lifeform-Analyzing Interstellar Konstruction Automaton. Human astronomers have identified the planet Helithe in the Selis system as a potential terraforming candidate. Your directive is to turn this baren world into a new home for humanity.",
+            "Body": "By the time humanity was able to form an effective global coalition to combat the anthropocene climate crisis, irreparable damage had already been done. Runaway polar melting and ever-increasing greenhouse gas levels have led to a hellish subsistence existence for humanity, who must now turn towards their long-forgotten dreams of space travel. You are the deepspace probe L.A.I.K.A., Lifeform-Analyzing Interstellar Konstruction Automaton. Human astronomers have identified the planet Helithe in the Selis system as a potential terraforming candidate. Your directive is to turn this barren world into a new home for humanity.",
             "Choices": [
                 {
                     "Text": "Enter the Selis System",
@@ -17,7 +17,7 @@
             "Body": "You are in orbit around the star Selis. From here you can travel anywhere within the inner solar system, or cross the asteroid belt to access the outer planets.",
             "Choices": [
                 {
-                    "Text": "Travel to Selis I, the metalic world",
+                    "Text": "Travel to Selis I, the metallic world",
                     "Type": "Travel",
                     "Target": "Selis I"
                 },
@@ -39,7 +39,7 @@
             ]
         },
         "Selis I":{
-            "Body": "You are in orbit of Selis I, a scorched metalic world orbiting close to its host star.",
+            "Body": "You are in orbit of Selis I, a scorched metallic world orbiting close to its host star.",
             "LockedText": [
                 {
                     "Text": "The crust and mantle of this world are rich in metals necessary for large-scale contstruction projects. The supplies you carry onboard should be sufficient to begin mining operations.",
@@ -96,7 +96,7 @@
             ]
         },
         "Helithe":{
-            "Body": "You are in orbit around Helithe. Though it orbits Selis at a distance that could theoretically support human life, the world is currently lifeless and baren, lacking crucial elements of habitability.",
+            "Body": "You are in orbit around Helithe. Though it orbits Selis at a distance that could theoretically support human life, the world is currently lifeless and barren, lacking crucial elements of habitability.",
             "LockedText": [
                 {
                     "Text": "The planet currently harbors only a thin atmosphere of carbon dioxide. You will need to source significant ammounts of oxygen and nitrogen elsewhere in the system.",
@@ -107,7 +107,7 @@
                     ]
                 },
                 {
-                    "Text": "Gas pods have transfered a sufficient amount nitrogen and oxygen from Selis III to Helithe, though without a magnetic field this atmosphere will not last.",
+                    "Text": "Gas pods have transferred a sufficient amount of nitrogen and oxygen from Selis III to Helithe, though without a magnetic field this atmosphere will not last.",
                     "Keys": [
                         {
                             "Key": "GasHarvest"
@@ -118,7 +118,7 @@
                     ]
                 },
                 {
-                    "Text": "Gas pods have transfered a sufficient amount nitrogen and oxygen from Selis III to Helithe. The atmosphere is of a correct composition and density to support human life.",
+                    "Text": "Gas pods have transferred a sufficient amount nitrogen and oxygen from Selis III to Helithe. The atmosphere is of a correct composition and density to support human life.",
                     "Keys": [
                         {
                             "Key": "GasHarvest"
@@ -148,7 +148,7 @@
                     ]
                 },
                 {
-                    "Text": "Your comet sling has provided the Helithe with ample water, and has resulted in an Earth-like hydrosphere.",
+                    "Text": "Your comet sling has provided Helithe with ample water, and has resulted in an Earth-like hydrosphere.",
                     "Keys": [
                         {
                             "Key": "CometSling"
@@ -170,7 +170,9 @@
                     "Text": "Your asteroid mines have delivered crucial soil minerals to Helithe, but they need to be integrated into the soil.",
                     "Keys": [
                         {
-                            "Key": "SoilMinerals",
+                            "Key": "SoilMinerals"
+                        },
+                        {
                             "UnKey": "SoilDroids"
                         }
                     ]
@@ -192,7 +194,7 @@
                     ]
                 },
                 {
-                    "Text": "An ancient device has heated and spun the planet's core. The planet now posses magnetic field to shield life and the atmosphere from solar radiation.",
+                    "Text": "An ancient device has heated and spun the planet's core. The planet now possesses a magnetic field to shield life and the atmosphere from solar radiation.",
                     "Keys": [
                         {
                             "Key": "MagCore"
@@ -296,7 +298,7 @@
             ]
         },
         "Hidden Satellite":{
-            "Body": "You are interfacing with a strange satellite in orbit around Helithe. It is clearly designed by intellegnt life, but you can only speculate as to who they may have been.",
+            "Body": "You are interfacing with a strange satellite in orbit around Helithe. It is clearly designed by intelligent life, but you can only speculate as to who they may have been.",
             "AddKeys": [
                 {
                     "Key":"SatelliteFound"
@@ -304,7 +306,7 @@
             ],
             "LockedText": [
                 {
-                    "Text": "After some time spent decyphering, the satellite seems to be a control platform for a massive subterranian terraforming device! It awaits your activation signal.",
+                    "Text": "After some time spent deciphering, the satellite seems to be a control platform for a massive subterranean terraforming device! It awaits your activation signal.",
                     "Keys": [
                         {
                             "UnKey": "MagCore"
@@ -486,7 +488,7 @@
                     "Target": "Selis IV"
                 },
                 {
-                    "Text": "Travel to Selis V, the baren world",
+                    "Text": "Travel to Selis V, the barren world",
                     "Type": "Travel",
                     "Target": "Selis V"
                 }
@@ -588,7 +590,7 @@
             ]
         },
         "Comet Sling": {
-            "Body": "Your construction fleet fabricates an enormous artificial satelite beyond the rings of Selis IV, catapulting ice-rich rocks from the rings towards Helithe.",
+            "Body": "Your construction fleet fabricates an enormous artificial satellite beyond the rings of Selis IV, catapulting ice-rich rocks from the rings towards Helithe.",
             "AddKeys": [
                 {
                     "Key":"CometSling"
@@ -603,7 +605,7 @@
             ]
         },
         "Selis V":{
-            "Body": "You are in orbit aroud Selis V, a small, baren world far from its host star.",
+            "Body": "You are in orbit aroud Selis V, a small, barren world far from its host star.",
             "LockedText": [
                 {
                     "Text": "You're picking up a bizarre, unidentified signal.",
